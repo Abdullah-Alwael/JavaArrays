@@ -7,7 +7,7 @@ public class JavaArrays {
 //        1.Write a Java program to test if the first and the last element of an array of
 //        integers is the same. The length of the array must be greater than or equal to
 //        2
-
+        System.out.println("Test first last");
         int[] arrOfInts = {50, -20, 0, 30, 40, 60, 10};
         System.out.println("is the first and last element the same (equal) in the following list?");
         System.out.println(Arrays.toString(arrOfInts));
@@ -20,7 +20,7 @@ public class JavaArrays {
 
 //        2.Write a Java program to find the numbers greater than the average of the
 //        numbers of a given array.
-
+        System.out.println("Greater than average:");
         int[] moreThanAverage = {1, 4, 17, 7, 25, 3, 100};
 
         System.out.println("numbers greater than average in the following list are:");
@@ -44,7 +44,7 @@ public class JavaArrays {
 
 //        3.Write a Java program to get the larger value between first and last
 //        element of an array of integers.
-
+        System.out.println("first last element compare:");
         Scanner input = new Scanner(System.in);
 
         System.out.println("Finding largest value between first and last:");
@@ -68,7 +68,7 @@ public class JavaArrays {
 
 //        4.Write a Java program to swap the first and last elements of an array and
 //        create a new array.
-
+        System.out.println("Swapping first last:");
         ArrayList<Integer> oldArrayBeforeSwap = new ArrayList<>();
         oldArrayBeforeSwap.add(10);
         oldArrayBeforeSwap.add(20);
@@ -94,6 +94,33 @@ public class JavaArrays {
 
         System.out.println("new array after swapping is:");
         System.out.println(newArrayAfterSwap);
+
+//        5. Write a program that places the odd elements of an array before the
+//        even elements.
+        System.out.println("moving Odd numbers before even ones: ");
+        ArrayList<Integer> oddBeforeEven = new ArrayList<>();
+        oddBeforeEven.add(2);
+        oddBeforeEven.add(3);
+        oddBeforeEven.add(40);
+        oddBeforeEven.add(1);
+        oddBeforeEven.add(5);
+        oddBeforeEven.add(9);
+        oddBeforeEven.add(4);
+        oddBeforeEven.add(10);
+        oddBeforeEven.add(7);
+
+        System.out.println("Original array before moving odds first:");
+        System.out.println(oddBeforeEven);
+        int j = 0;
+        for (int i = 0; i <= oddBeforeEven.size()-1; i++) {
+            if (oddBeforeEven.get(i)%2 == 1){
+                oddBeforeEven.add(j, oddBeforeEven.get(i));
+                j++;
+                oddBeforeEven.remove(i+1);
+            }
+        }
+        System.out.println("The same array after moving odds first");
+        System.out.println(oddBeforeEven);
 
 
     }
