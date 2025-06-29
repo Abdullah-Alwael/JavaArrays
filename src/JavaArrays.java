@@ -122,6 +122,32 @@ public class JavaArrays {
         System.out.println("The same array after moving odds first");
         System.out.println(oddBeforeEven);
 
+//      6. Write a program that test the equality of two arrays.
+        System.out.println("Testing for qual arrays:");
 
+        System.out.println("how many elements in the arrays?");
+
+        length = input.nextInt();
+
+        ArrayList<Integer> firstArray = new ArrayList<>();
+        ArrayList<Integer> secondArray = new ArrayList<>();
+
+        System.out.println("Enter the first array numbers:");
+        for (int i = 0; i <= length-1; i++) {
+            System.out.println("enter the "+(i+1)+" number:");
+            firstArray.add(input.nextInt());
+        }
+
+        System.out.println("Enter the second array numbers:");
+        for (int i = 0; i <= length-1; i++) {
+            System.out.println("enter the "+(i+1)+" number:");
+            secondArray.add(input.nextInt());
+        }
+
+        if (firstArray.containsAll(secondArray)){
+            System.out.println("They are equal");
+        } else {
+            System.out.println("They are not equal");
+        }
     }
 }
