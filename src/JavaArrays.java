@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -64,6 +65,35 @@ public class JavaArrays {
         } else {
             System.out.println("The largest element is the last one = "+largestFirstLast[largestFirstLast.length-1]);
         }
+
+//        4.Write a Java program to swap the first and last elements of an array and
+//        create a new array.
+
+        ArrayList<Integer> oldArrayBeforeSwap = new ArrayList<>();
+        oldArrayBeforeSwap.add(10);
+        oldArrayBeforeSwap.add(20);
+        oldArrayBeforeSwap.add(30);
+        oldArrayBeforeSwap.add(40);
+        oldArrayBeforeSwap.add(50);
+        oldArrayBeforeSwap.add(60);
+
+        Integer tempFirstElement = oldArrayBeforeSwap.getFirst();
+        oldArrayBeforeSwap.set(0,oldArrayBeforeSwap.getLast());
+        oldArrayBeforeSwap.set(oldArrayBeforeSwap.size()-1, tempFirstElement);
+
+//        another solution found after searching the internet is by mathematically adding and then subtracting the
+//        values using the same variables/elements. (note: first solution was not searched, I was only curious);
+
+//        a = 5;
+//        b = 10;
+//        a = a + b; 5 + 10 = 15;
+//        b = a - b; 15 - 10 = 5; which is a's original value;
+//        a = a - b; 15 - 5 = 10; which is b's original value;
+
+        ArrayList<Integer> newArrayAfterSwap = new ArrayList<>(oldArrayBeforeSwap);
+
+        System.out.println("new array after swapping is:");
+        System.out.println(newArrayAfterSwap);
 
 
     }
